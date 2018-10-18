@@ -26,15 +26,15 @@ version pkgVersion
 project.archivesBaseName = pkgName
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
     resourcePrefix 'nest_'
     lintOptions {
         disable "InvalidPackage" // ignore complains about java.nio references
     }
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 25
+        targetSdkVersion 28
         versionCode 1
         versionName pkgVersion
 
@@ -171,18 +171,18 @@ bintray {
 }
 
 dependencies {
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.robolectric:robolectric:3.3.2'
-    testCompile 'org.mockito:mockito-all:1.10.19'
-    testCompile 'org.powermock:powermock-module-junit4:1.6.6'
-    testCompile 'org.powermock:powermock-api-mockito:1.6.6'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.robolectric:robolectric:3.3.2'
+    testImplementation 'org.mockito:mockito-all:1.10.19'
+    testImplementation 'org.powermock:powermock-module-junit4:1.6.6'
+    testImplementation 'org.powermock:powermock-api-mockito:1.6.6'
 
-    compile 'com.android.support:support-annotations:25.3.1'
-    compile 'com.fasterxml.jackson.core:jackson-annotations:2.8.8'
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.8'
-    compile 'com.fasterxml.jackson.core:jackson-core:2.8.8'
-    compile 'com.squareup.okhttp3:okhttp:3.7.0'
-    compile 'commons-io:commons-io:2.4'
+    implementation 'com.android.support:support-annotations:28.0.0'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.8.8'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.8.8'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.8.8'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'commons-io:commons-io:2.4'
 }
 
 android.libraryVariants.all { variant ->
